@@ -1,106 +1,143 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="vi">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>H4RS</title>
     <style>
-        * {
+        /* CSS cho trang web */
+        body {
+            font-family: sans-serif;
             margin: 0;
             padding: 0;
-            box-sizing: border-box; /* Đảm bảo padding và viền không làm ảnh hưởng đến căn chỉnh */
+            background-color: #f4f4f4;
+            color: #333;
         }
 
-        html, body {
-            height: 100%; /* Đảm bảo chiều cao chiếm toàn bộ màn hình */
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
         }
 
-        body {
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            height: 100vh;
-            background: linear-gradient(135deg, #000000, #1a1a1a, #333333);
-            background-size: 400% 400%;
-            animation: backgroundEffect 10s infinite;
-            overflow: hidden;
+        nav ul {
+            list-style: none;
+            padding: 0;
+            text-align: center; /* Can giữa menu */
         }
 
-        h1 {
-            font-size: 10vw;
-            margin: 0;
-            color: white;
-            text-shadow: 
-                2px 2px 5px rgba(0, 0, 0, 0.5), 
-                -2px -2px 5px rgba(255, 255, 255, 0.8);
-            border: 2px solid white;
-            padding: 10px 20px;
-            border-radius: 5px;
-            box-shadow: 
-                0 0 10px rgba(255, 255, 255, 0.5), 
-                inset 0 0 5px rgba(255, 255, 255, 0.2);
-            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        nav li {
+            display: inline;
+            margin: 0 10px;
         }
 
-        h1:hover {
-            transform: scale(1.1);
-            box-shadow: 
-                0 0 20px rgba(255, 255, 255, 0.8), 
-                inset 0 0 10px rgba(255, 255, 255, 0.5);
+        nav a {
+            color: #fff;
+            text-decoration: none;
+            padding: 5px 10px; /* Thêm padding cho menu */
         }
 
-        .light {
-            position: absolute;
-            width: 200px;
-            height: 200px;
-            background: radial-gradient(circle, rgba(255, 255, 255, 0.3), rgba(0, 0, 0, 0));
-            filter: blur(100px);
-            animation: moveLight 6s infinite ease-in-out;
-            pointer-events: none;
+        nav a:hover {
+            background-color: #555; /* Hiệu ứng hover cho menu */
         }
 
-        .light:nth-child(1) {
-            top: 10%;
-            left: 20%;
-            animation-delay: 0s;
+        section {
+            padding: 20px;
         }
 
-        .light:nth-child(2) {
-            top: 70%;
-            left: 80%;
-            animation-delay: 2s;
+        .member, .project, .activity {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            padding: 20px;
+            margin-bottom: 20px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Đổ bóng */
+            border-radius: 5px; /* Bo tròn góc */
         }
 
-        .light:nth-child(3) {
-            top: 50%;
-            left: 40%;
-            animation-delay: 4s;
+        .member img {
+            max-width: 150px;
+            height: auto;
+            border-radius: 50%; /* Hình tròn */
+            float: left;
+            margin-right: 20px;
         }
 
-        @keyframes backgroundEffect {
-            0% { background-position: 0% 50%; }
-            50% { background-position: 100% 50%; }
-            100% { background-position: 0% 50%; }
+        footer {
+            background-color: #333;
+            color: #fff;
+            padding: 10px;
+            text-align: center;
         }
 
-        @keyframes moveLight {
-            0% {
-                transform: translate(0, 0);
-            }
-            50% {
-                transform: translate(50vw, 50vh);
-            }
-            100% {
-                transform: translate(0, 0);
-            }
+        /* Hiệu ứng hover cho thành viên, dự án, hoạt động */
+        .member:hover, .project:hover, .activity:hover {
+            transform: translateY(-5px); /* Di chuyển lên trên */
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Đổ bóng đậm hơn */
+            transition: all 0.3s ease; /* Tạo hiệu ứng mượt mà */
         }
     </style>
 </head>
 <body>
-    <div class="light"></div>
-    <div class="light"></div>
-    <div class="light"></div>
+    <header>
+        <h1>H4RS</h1>
+        <nav>
+            <ul>
+                <li><a href="#members">Thành viên</a></li>
+                <li><a href="#projects">Dự án</a></li>
+                <li><a href="#activities">Hoạt động</a></li>
+                <li><a href="#contact">Liên hệ</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <h1>H4RS</h1>
+    <section id="members">
+        <h2>Thành viên</h2>
+
+        <div class="member">
+            <img src="avatar1.webp" alt="Member 1">
+            <h3>Hoàng Phi Hùng</h3>
+            <p>Leader Team</p>
+        </div>
+                
+    </section>
+
+    <section id="projects">
+        <h2>Dự án</h2>
+        <div class="project">
+            <h3>Chưa có dự án</h3>
+        </div>
+    </section>
+
+    <section id="activities">
+        <h2>Hoạt động</h2>
+        <div class="activity">
+            <h3>Chưa có hoạt động</h3>
+        </div>
+    </section>
+
+    <footer>
+        <p>Liên hệ: hung319@h4rs.io.vn</p>
+    </footer>
+
+    <script>
+        // JavaScript cho trang web (nếu cần)
+        // Ví dụ: hiệu ứng cuộn trang
+        const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
+        smoothScrollLinks.forEach(link => {
+            link.addEventListener('click', function (event) {
+                event.preventDefault();
+
+                const targetId = this.getAttribute('href').substring(1);
+                const targetElement = document.getElementById(targetId);
+
+                window.scrollTo({
+                    top: targetElement.offsetTop,
+                    behavior: 'smooth'
+                });
+            });
+        });
+
+    </script>
 </body>
 </html>
