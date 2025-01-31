@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>H4RS</title>
     <style>
+        /* CSS cho trang web */
         body {
             font-family: sans-serif;
             margin: 0;
@@ -23,7 +24,7 @@
         nav ul {
             list-style: none;
             padding: 0;
-            text-align: center;
+            text-align: center; /* Can giữa menu */
         }
 
         nav li {
@@ -34,11 +35,11 @@
         nav a {
             color: #fff;
             text-decoration: none;
-            padding: 5px 10px;
+            padding: 5px 10px; /* Thêm padding cho menu */
         }
 
         nav a:hover {
-            background-color: #555;
+            background-color: #555; /* Hiệu ứng hover cho menu */
         }
 
         section {
@@ -50,23 +51,16 @@
             border: 1px solid #ddd;
             padding: 20px;
             margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
-            border-radius: 5px;
-            overflow: hidden; /* Key: Prevents content from overflowing */
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Đổ bóng */
+            border-radius: 5px; /* Bo tròn góc */
         }
 
         .member img {
-            max-width: 150px; /* Key: Ensures image doesn't exceed container */
-            height: auto;     /* Key: Maintains aspect ratio */
-            border-radius: 50%;
+            width: 100px; /* Chiều rộng cố định là 150px */
+            height: 100px; /* Chiều cao cố định là 150px */
+            border-radius: 50%; /* Hình tròn */
             float: left;
             margin-right: 20px;
-            display: block; /* Prevents potential whitespace issues */
-        }
-        .member h3, .member p{
-            overflow: hidden; /* Prevents text from overflowing */
-            text-overflow: ellipsis; /* Adds ellipsis (...) for overflowed text */
-            white-space: nowrap;  /* Prevents text from wrapping */
         }
 
         footer {
@@ -76,14 +70,15 @@
             text-align: center;
         }
 
+        /* Hiệu ứng hover cho thành viên, dự án, hoạt động */
         .member:hover, .project:hover, .activity:hover {
-            transform: translateY(-5px);
-            box-shadow: 0 5px 10px rgba(0,0,0,0.15);
-            transition: all 0.3s ease;
+            transform: translateY(-5px); /* Di chuyển lên trên */
+            box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Đổ bóng đậm hơn */
+            transition: all 0.3s ease; /* Tạo hiệu ứng mượt mà */
         }
-</style>
+    </style>
 </head>
-</body>
+<body>
     <header>
         <h1>H4RS</h1>
         <nav>
