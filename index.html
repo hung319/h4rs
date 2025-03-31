@@ -4,141 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>H4RS</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <style>
-        /* CSS cho trang web */
         body {
-            font-family: sans-serif;
-            margin: 0;
-            padding: 0;
-            background-color: #f4f4f4;
-            color: #333;
-        }
-
-        header {
-            background-color: #333;
-            color: #fff;
-            padding: 20px;
-            text-align: center;
-        }
-
-        nav ul {
-            list-style: none;
-            padding: 0;
-            text-align: center; /* Can giữa menu */
-        }
-
-        nav li {
-            display: inline;
-            margin: 0 10px;
-        }
-
-        nav a {
-            color: #fff;
-            text-decoration: none;
-            padding: 5px 10px; /* Thêm padding cho menu */
-        }
-
-        nav a:hover {
-            background-color: #555; /* Hiệu ứng hover cho menu */
-        }
-
-        section {
-            padding: 20px;
-        }
-
-        .member, .project, .activity {
-            background-color: #fff;
-            border: 1px solid #ddd;
-            padding: 20px;
-            margin-bottom: 20px;
-            box-shadow: 0 2px 5px rgba(0,0,0,0.1); /* Đổ bóng */
-            border-radius: 5px; /* Bo tròn góc */
-        }
-
-        .member img {
-            width: 120px; /* Chiều rộng cố định là 150px */
-            height: 120px; /* Chiều cao cố định là 150px */
-            border-radius: 50%; /* Hình tròn */
-            float: left;
-            margin-right: 20px;
-        }
-
-        footer {
-            background-color: #333;
-            color: #fff;
-            padding: 10px;
-            text-align: center;
-        }
-
-        /* Hiệu ứng hover cho thành viên, dự án, hoạt động */
-        .member:hover, .project:hover, .activity:hover {
-            transform: translateY(-5px); /* Di chuyển lên trên */
-            box-shadow: 0 5px 10px rgba(0,0,0,0.15); /* Đổ bóng đậm hơn */
-            transition: all 0.3s ease; /* Tạo hiệu ứng mượt mà */
+            font-family: 'Inter', sans-serif;
         }
     </style>
 </head>
-<body>
-    <header>
-        <h1>H4RS</h1>
-        <nav>
-            <ul>
-                <li><a href="#members">Thành viên</a></li>
-                <li><a href="#projects">Dự án</a></li>
-                <li><a href="#activities">Hoạt động</a></li>
-                <li><a href="#contact">Liên hệ</a></li>
+<body class="bg-gray-100">
+    <header class="bg-blue-800 text-white py-4 flex justify-between items-center shadow-md sticky top-0 z-10 rounded-md">
+        <div class="logo text-xl font-bold ml-4">H4RS</div>
+        <nav class="mr-4">
+            <ul class="flex space-x-4">
+                <li><a href="#gioi-thieu" class="hover:text-blue-300 no-underline">Giới thiệu</a></li>
+                <li><a href="#thanh-vien" class="hover:text-blue-300 no-underline">Thành viên</a></li>
+                <li><a href="#du-an" class="hover:text-blue-300 no-underline">Dự án</a></li>
+                <li><a href="#lien-he" class="hover:text-blue-300 no-underline">Liên hệ</a></li>
             </ul>
         </nav>
     </header>
 
-    <section id="members">
-        <h2>Thành viên</h2>
-
-        <div class="member">
-            <img src="/avatar/six.webp" alt="Member 1">
-            <h3>Hoàng Phi Hùng</h3>
-            <p>Leader Team</p>
-            <li>Info: <a href="https://hung319.is-a.dev" target="_blank">click</a></li>
-        </div>
-                
+    <section id="gioi-thieu" class="container mx-auto py-10 px-4 text-center rounded-md">
+        <h2 class="text-3xl font-semibold text-blue-800 mb-6">Giới thiệu về H4RS</h2>
+        <p class="text-gray-700 text-lg">
+            Chào mừng đến với trang web của H4RS!  Chúng tôi là một team IT năng động và đam mê,
+            luôn hướng đến những giải pháp công nghệ đột phá. Với tinh thần đồng đội mạnh mẽ và sự sáng tạo không ngừng,
+            chúng tôi tin rằng mình có thể chinh phục mọi thử thách trong thế giới công nghệ.  Yuu Onii-chan daisuki!
+        </p>
     </section>
 
-    <section id="projects">
-        <h2>Dự án</h2>
-        <div class="project">
-            <li>Github Projects: <a href="https://github.com/thainguyen06" target="_blank">click</a></li>
+    <section id="thanh-vien" class="bg-blue-100 py-10 px-4 rounded-md">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-blue-800 mb-8 text-center">Thành viên của chúng tôi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6 flex flex-col items-center">
+                    <img src="/avatar/six.webp" alt="Thành viên 1" class="rounded-full mb-4">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Nguyễn Văn A</h3>
+                    <p class="text-gray-600 text-center mb-2">Leader</p>
+                    <p class="text-gray-700 text-sm text-center">
+                        "Luôn dẫn đầu và truyền cảm hứng cho cả đội. Onii-chan sugoi ne!"
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <section id="activities">
-        <h2>Hoạt động</h2>
-        <div class="activity">
-            <h3>Hoạt động từ 2024 đến nay</h3>
+    <section id="du-an" class="py-10 px-4 rounded-md">
+        <div class="container mx-auto">
+            <h2 class="text-3xl font-semibold text-blue-800 mb-8 text-center">Dự án của chúng tôi</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+                <div class="bg-white rounded-lg shadow-md p-6">
+                    <h3 class="text-xl font-semibold text-blue-700 mb-2">Dự án A</h3>
+                    <p class="text-gray-700 text-sm mb-4">
+                        Mô tả dự án: Ứng dụng quản lý nhân sự cho doanh nghiệp.
+                    </p>
+                    <p class="text-gray-600 text-sm">
+                        Công nghệ: <a href="https://github.com/your-repo" class="text-blue-500 hover:underline">GitHub</a>
+                    </p>
+                </div>
+            </div>
         </div>
     </section>
 
-    <footer>
-        <p>Liên hệ: hung319@h4rs.io.vn</p>
+    <section id="lien-he" class="py-10 px-4 rounded-md">
+        <div class="container mx-auto text-center">
+            <h2 class="text-3xl font-semibold text-blue-800 mb-6">Liên hệ với chúng tôi</h2>
+            <p class="text-gray-700 text-lg mb-4">
+                Đừng ngần ngại liên hệ với chúng tôi nếu bạn có bất kỳ câu hỏi hoặc muốn hợp tác.  Onii-chan to zutto issho ni itai!
+            </p>
+            <p class="text-blue-600 text-lg font-semibold">
+                Email: contact@h4rs.com
+            </p>
+            <p class="text-blue-600 text-lg font-semibold">
+                Điện thoại: +84 123 456 789
+            </p>
+        </div>
+    </section>
+
+    <footer class="bg-gray-800 text-white py-4 text-center rounded-md">
+        <p>© 2024 H4RS. All rights reserved.</p>
     </footer>
 
     <script>
-        // JavaScript cho trang web (nếu cần)
-        // Ví dụ: hiệu ứng cuộn trang
-        const smoothScrollLinks = document.querySelectorAll('a[href^="#"]');
-        smoothScrollLinks.forEach(link => {
-            link.addEventListener('click', function (event) {
-                event.preventDefault();
+        // Smooth scrolling for navigation links
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
 
-                const targetId = this.getAttribute('href').substring(1);
-                const targetElement = document.getElementById(targetId);
-
-                window.scrollTo({
-                    top: targetElement.offsetTop,
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
                     behavior: 'smooth'
                 });
             });
         });
-
     </script>
 </body>
 </html>
